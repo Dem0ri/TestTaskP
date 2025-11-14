@@ -9,7 +9,6 @@ import java.time.Duration;
 
 public class BasePage {
     protected WebDriver driver;
-    protected String baseUrl = "file:///C:/Users/Колобокпиранья/Downloads/Telegram%20Desktop/qa-test.html";
 
     public BasePage(WebDriver driver) {
         this.driver = driver;
@@ -20,7 +19,4 @@ public class BasePage {
                 .until(ExpectedConditions.presenceOfElementLocated(locator));
     }
 
-    public void goToSite() {
-        driver.get(baseUrl);
-    }
 }

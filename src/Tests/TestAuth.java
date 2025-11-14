@@ -13,7 +13,6 @@ public class TestAuth extends BaseTest {
     public void setUp() {
         super.setUp();
         authPage = new AuthHelpers(driver);
-        authPage.goToSite();
     }
 
     @Test

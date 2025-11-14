@@ -16,7 +16,6 @@ public class TestAddUser extends BaseTest {
         super.setUp();
         addPage = new AddHelpers(driver);
         authPage = new AuthHelpers(driver);
-        addPage.goToSite();
         authPage.fillLoginForm("test@protei.ru");
         authPage.fillPasswordForm("test");
         authPage.clickAuthButton();
@@ -35,7 +34,7 @@ public class TestAddUser extends BaseTest {
     }
 
     @Test
-    public void testAddUserManWithAllCheckboxes() {
+    public void testAddUserManWithAllCheckbox() {
         addPage.fillEmailForm("abc@mail.ru");
         addPage.fillNameForm("Сергей");
         addPage.fillGenderForm("Мужской");
@@ -48,7 +47,7 @@ public class TestAddUser extends BaseTest {
     }
 
     @Test
-    public void testAddUserWomanWithAllCheckboxes() {
+    public void testAddUserWomanWithAllCheckbox() {
         addPage.fillEmailForm("svet@mailz.ru");
         addPage.fillNameForm("Светлана");
         addPage.fillGenderForm("Женский");
@@ -97,7 +96,7 @@ public class TestAddUser extends BaseTest {
     }
 
     @Test
-    public void testAddUserWithoutProbelNameForm() {
+    public void testAddUserWithSpaceNameForm() {
         addPage.fillEmailForm("czxc@mail.ru");
         addPage.fillNameForm(" Нина ");
         addPage.fillGenderForm("Женский");
