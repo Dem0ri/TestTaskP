@@ -106,7 +106,7 @@ public class TestAuth extends BaseTest {
     }
 
     @Test
-    public void testValidDataProbelPassword() {
+    public void testValidDataWithSpaceValidPassword() {
         authPage.fillLoginForm("!test@protei.ru");
         authPage.fillPasswordForm("test ");
         authPage.clickAuthButton();
