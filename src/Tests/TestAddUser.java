@@ -9,13 +9,12 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class TestAddUser extends BaseTest {
 
     private AddHelpers addPage;
-    private AuthHelpers authPage;
 
     @BeforeEach
     public void setUp() {
         super.setUp();
         addPage = new AddHelpers(driver);
-        authPage = new AuthHelpers(driver);
+        AuthHelpers authPage = new AuthHelpers(driver);
         authPage.fillLoginForm("test@protei.ru");
         authPage.fillPasswordForm("test");
         authPage.clickAuthButton();
